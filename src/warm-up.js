@@ -23,7 +23,7 @@ inStock = 10*2
 // Reassign (not initialize) your "inStock" variable from above. You got hungry and needed a snack!
 // Use a built in math operator to decrement the inStock count by 1.
 
-inStock=10-1
+inStock--
 
 
 // Initialize a new variable "isFavorite", and assign it to a boolean value indicating
@@ -35,7 +35,7 @@ var isFavorite = true;
 var shouldOrderMore =
 if(inStock<20){
   return true;
-}
+} 
 // assign a boolean value to this variable. If "inStock" is less than 20, the
 // variable should be true, otherwise it should be false. You MUST use a
 // comparison operator.
