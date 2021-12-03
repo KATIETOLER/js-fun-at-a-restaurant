@@ -21,15 +21,13 @@ function listItems(listStuff) {
   }
 
   function searchOrder(deliveryOrders, food) {
-    var orders = []
+    var isOrdered = false;
     for(var i = 0; i < deliveryOrders.length; i++) {
-      orders.push(food)
-      if(orders[i].item === food) {
-        return true;
-      } else if (orders[i].item !== food) {
-        return false
+      if(deliveryOrders[i].item === food) {
+        isOrdered = true;
       }
     }
+    return isOrdered
   }
 
 
