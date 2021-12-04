@@ -2,7 +2,7 @@
 function createRestaurant(name) {
 var restaurant = {
   name: name,
-  menus: menu = {
+  menus: {
     breakfast: [],
     lunch: [],
     dinner: []
@@ -25,15 +25,31 @@ function addMenuItem(restaurant, food) {
   }
 
 function removeMenuItem(restaurant, item, type) {
-  if(type === "breakfast"){
-    restaurant.menus.breakfast.splice(item, 1)
-  }
-  return `No one is eating our ${item} - it has been removed from the ${type} menu!`
-}
 
+  for(var i = 0; i < restaurant.menus[type].length; i++) {
+  if(restaurant.menus[type][i].name === item) {
+    restaurant.menus[type].splice(item, 1)
+    return `No one is eating our ${item} - it has been removed from the ${type} menu!`
+    }
+  }
+    return `Sorry, we don't sell ${item}, try adding a new recipe!`
+}
 
 module.exports = {
   createRestaurant,
   addMenuItem,
   removeMenuItem
 }
+
+
+
+
+// if(type === "breakfast" && !restaurant.menus.breakfast.includes(item)){
+  //   restaurant.menus.breakfast.splice(item, 1)
+  // }
+  // if(type === "lunch" && restaurant.menus.lunch.includes(item)){
+    //   restaurant.menus.lunch.splice(item, 1)
+    // }
+    // if(type === "dinner" && restaurant.menus.dinner.includes(item)){
+      //   restaurant.menus.dinner.splice(item, 1)
+      // }
