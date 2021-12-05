@@ -2,7 +2,6 @@ class Chef {
   constructor(name, restaurant) {
     this.name = name;
     this.restaurant = restaurant
-
   }
   greetCustomer(name, isMorning) {
     if (isMorning) {
