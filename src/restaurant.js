@@ -12,14 +12,8 @@ var restaurant = {
 }
 
 function addMenuItem(restaurant, food) {
-    if(food.type === "breakfast" && !restaurant.menus.breakfast.includes(food)) {
-    restaurant.menus.breakfast.push(food)
-      }
-     if(food.type === "lunch" && !restaurant.menus.lunch.includes(food)) {
-    restaurant.menus.lunch.push(food)
-      }
-    if(food.type === "dinner" && !restaurant.menus.dinner.includes(food)) {
-    restaurant.menus.dinner.push(food)
+  if(!restaurant.menus[food.type].includes(food)) {
+  restaurant.menus[food.type].push(food)
       }
       return restaurant
   }

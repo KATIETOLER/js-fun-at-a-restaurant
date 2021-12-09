@@ -31,8 +31,7 @@ describe("restaurant.js", function() {
     });
 
     it("should have different types of menus", function() {
-      var pizzaRestaurant = createR
-      estaurant("Sexy Pizza");
+      var pizzaRestaurant = createRestaurant("Sexy Pizza");
 
       assert.deepEqual(pizzaRestaurant.menus.breakfast, []);
       assert.deepEqual(pizzaRestaurant.menus.lunch, []);
